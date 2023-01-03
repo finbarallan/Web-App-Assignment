@@ -1,0 +1,290 @@
+/* imorting fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+/* text styling */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #424952;
+    font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+h1 {
+    font-family: 'Inter', serif;
+    font-weight: 450;
+    color: #424952;
+    font-size: 48px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+h2 {
+    font-family: 'Inter', serif;
+    font-weight: 450;
+    color: #424952;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h3 {
+    font-family: 'Inter', serif;
+    font-weight: 450;
+    color: #424952;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* hover icon animations */
+.party-container h3 {
+    font-family: 'Inter', serif;
+    font-weight: 450;
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.party-container {
+    max-width: 960px;
+    padding-bottom: 20px;
+    margin: auto;
+    text-align: center;
+}
+.party-block {
+    display: inline-block;
+	position: relative;
+    margin: 8px;
+}
+.party-block img {
+    height: 200px;
+    width: 200px;
+    border-radius: 5%;
+    transition: 0.2s;
+}
+.party-block .party-overlay img {
+    height: 100%;
+    width: 100%;
+}
+.party-block .party-overlay p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+.party-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 200px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.25s;
+    border-radius: 50%;
+}
+.party-overlay>* {
+	transform: translateX(-20px);
+	transition: transform 0.2s;
+}
+.party-overlay:hover {
+	opacity: 1;
+}
+.party-overlay:hover>* {
+	transform: translateY(0);
+}
+.party-title {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+/* leadership lists */
+.leader-container {
+    max-width: 960px;
+    margin: auto;
+    text-align: center;
+}
+.leader-block {
+    display: inline-block;
+	position: relative;
+}
+.leader-list {
+    max-width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    list-style-type: disc;
+    text-align: left;
+    margin: 20px;
+    margin-bottom: 20px;
+}
+.leader-container h2 {
+    margin-bottom: 0px;
+}
+.leader-list h3 {
+    transform: translateX(-20px);
+    margin-bottom: 10px;
+}
+#dem-leaders li {
+    list-style: none;
+    padding: 10px 30px;
+    background-image: url(./images/DemocraticLogo.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+}
+#rep-leaders li {
+    list-style: none;
+    padding: 10px 30px;
+    background-image: url(./images/Republicanlogo.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+}
+/* filter select div */
+.select-container {
+    max-width: 960px;
+    margin: auto;
+    text-align: center;
+}
+.select-container h2 {
+    padding-bottom: 10px;
+}
+/* tables flexbox */
+.table-container {
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+/* senate table styling */
+#senate-table {
+    width: 500px;
+    margin: 25px;
+    margin-left: 40px;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 14px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 320px;
+}
+#senate-table thead tr {
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+}
+#senate-table th {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #424952;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    transition: 0.2s;
+    text-align: center;
+}
+#senate-table th:first-of-type{
+    width: 160px;
+}
+#senate-table th:nth-of-type(2){
+    width: 110px;
+}
+#senate-table th, td {
+    padding: 12px 15px;
+    transition: 0.2s;
+}
+#senate-table tbody #sen-name{
+    transition: 0.2s;
+}
+#senate-table tbody th {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+#senate-table tbody td {
+    background-color: #B8E3FF;
+    border-bottom: 2px solid #FFFFFF;
+    transition: 0.2s;
+}
+#senate-table tbody tr:last-of-type {
+    border-bottom: 2px solid #0583D2;
+}
+#senate-table tbody #sen-name:hover {
+    color: #0583D2;
+    border-bottom: 2px solid #0583D2;
+    transition: 0.2s;
+}
+#senate-table tbody #sen-name:last-of-type:hover {
+    color: #0583D2;
+    border-bottom: 2px solid #0583D2;
+    transition: 0.2s;
+}
+/* additional info styling */
+#info-table {
+    height: 150px;
+    min-width: 400px;
+    width: 500px;
+    margin: 25px;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 14px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 500px;
+}
+#info-table thead tr {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+#info-table th {
+    height: 10px;
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #424952;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+#info-table th, td {
+    padding: 12px 15px;
+}
+#info-table tbody th {
+    background-color: #FFFFFF;
+
+}
+#info-table tbody td {
+    background-color: #f5c6cf;
+    transition: 0.2s;
+}
+#info-table tbody tr:last-of-type {
+    height: 50px;
+    background-color: #FFFFFF;
+}
+#info-table tbody #reset {
+    transition: 0.2s;
+}
+#info-table tbody #reset {
+    border-top: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    transition: 0.2s;
+}
+#info-table tbody #reset:hover {
+    color: #ff1144;
+    border-top: 2px solid #ff1144;
+    border-bottom: 2px solid #ff1144;
+    transition: 0.2s;
+}
+/* Comment */
+#child {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
